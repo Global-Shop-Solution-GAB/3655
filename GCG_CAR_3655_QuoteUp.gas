@@ -1,0 +1,1351 @@
+Program.Sub.ScreenSU.Start
+gui.fMove..create
+gui.fMove..caption("Router Selection")
+gui.fMove..size(11985,14745)
+gui.fMove..minx(0)
+gui.fMove..miny(0)
+gui.fMove..position(205,5875)
+gui.fMove..event(unload,Form1_Unload)
+gui.fMove..alwaysontop(False)
+gui.fMove..fontname("Arial")
+gui.fMove..fontsize(7)
+gui.fMove..forecolor(0)
+gui.fMove..fontstyle(,,,,)
+gui.fMove..BackColor(-2147483633)
+gui.fMove..controlbox(True)
+gui.fMove..maxbutton(False)
+gui.fMove..minbutton(False)
+gui.fMove..mousepointer(1)
+gui.fMove..moveable(True)
+gui.fMove..sizeable(False)
+gui.fMove..ShowInTaskBar(False)
+gui.fMove..titlebar(True)
+gui.fMove.lblQty.create(label,"Total Quantity",True,1500,300,1,210,6405,True,0,Arial,7,-2147483633,0)
+gui.fMove.lblQty.defaultvalue("")
+gui.fMove.lblQty.controlgroup(0)
+gui.fMove.gsfgMove.create(gsflexgrid)
+gui.fMove.gsfgMove.FixedRows(0)
+gui.fMove.gsfgMove.FixedCols(0)
+gui.fMove.gsfgMove.visible(True)
+gui.fMove.gsfgMove.size(11535,4920)
+gui.fMove.gsfgMove.zorder(0)
+gui.fMove.gsfgMove.position(100,1100)
+gui.fMove.gsfgMove.enabled(True)
+gui.fMove.gsfgMove.event(commandclick,gsfgmove_commandclick)
+gui.fMove.txtQty.create(textbox,"",True,1495,295,0,1255,6405,False,1,Arial,7,16777215,1)
+gui.fMove.txtQty.defaultvalue("")
+gui.fMove.txtQty.controlgroup(0)
+gui.fMove.lblPrice.create(label,"Total Extended Price",True,1495,295,1,3775,6405,True,0,Arial,7,-2147483633,0)
+gui.fMove.lblPrice.defaultvalue("")
+gui.fMove.lblPrice.controlgroup(0)
+gui.fMove.txtExt.create(textbox,"",True,1495,295,0,5260,6405,False,1,Arial,7,16777215,1)
+gui.fMove.txtExt.defaultvalue("")
+gui.fMove.txtExt.controlgroup(0)
+gui.fMove.cmdSave.create(button)
+gui.fMove.cmdSave.caption("Save")
+gui.fMove.cmdSave.visible(False)
+gui.fMove.cmdSave.size(1120,340)
+gui.fMove.cmdSave.zorder(0)
+gui.fMove.cmdSave.position(200,7015)
+gui.fMove.cmdSave.enabled(True)
+gui.fMove.cmdSave.fontname("Arial")
+gui.fMove.cmdSave.fontsize(7)
+gui.fMove.cmdSave.defaultvalue("")
+gui.fMove.cmdSave.controlgroup(0)
+gui.fMove.gsfgQuote.create(gsflexgrid)
+gui.fMove.gsfgQuote.FixedRows(0)
+gui.fMove.gsfgQuote.FixedCols(0)
+gui.fMove.gsfgQuote.visible(True)
+gui.fMove.gsfgQuote.size(11535,6015)
+gui.fMove.gsfgQuote.zorder(0)
+gui.fMove.gsfgQuote.position(100,7600)
+gui.fMove.gsfgQuote.enabled(True)
+gui.fMove.gsfgQuote.event(posttextmatrix,gsfgquote_posttextmatrix)
+gui.fMove.gsfgQuote.event(checkclick,gsfgquote_checkclick)
+gui.fMove.cmdQuote.create(button)
+gui.fMove.cmdQuote.caption("Quote")
+gui.fMove.cmdQuote.visible(True)
+gui.fMove.cmdQuote.size(1125,345)
+gui.fMove.cmdQuote.zorder(0)
+gui.fMove.cmdQuote.position(200,13800)
+gui.fMove.cmdQuote.enabled(True)
+gui.fMove.cmdQuote.fontname("Arial")
+gui.fMove.cmdQuote.fontsize(7)
+gui.fMove.cmdQuote.event(click,cmdQuote_Click)
+gui.fMove.cmdQuote.defaultvalue("")
+gui.fMove.cmdQuote.controlgroup(0)
+gui.fMove.lblPart.create(label,"Part",True,630,255,1,200,230,True,0,Arial,7,-2147483633,0)
+gui.fMove.lblPart.defaultvalue("")
+gui.fMove.lblPart.controlgroup(0)
+gui.fMove.txtPart.create(textbox,"",True,2820,300,0,590,200,True,0,Arial,7,-2147483643,1)
+gui.fMove.txtPart.event(keypressenter,cmdbrowse_click)
+gui.fMove.txtPart.defaultvalue("")
+gui.fMove.txtPart.controlgroup(0)
+gui.fMove.lblRev.create(label,"Rev",True,495,255,1,3555,230,True,0,Arial,7,-2147483633,0)
+gui.fMove.lblRev.defaultvalue("")
+gui.fMove.lblRev.controlgroup(0)
+gui.fMove.txtrev.create(textbox,"",True,630,300,0,3895,200,True,0,Arial,7,-2147483643,1)
+gui.fMove.txtrev.event(keypressenter,cmdbrowse_click)
+gui.fMove.txtrev.defaultvalue("")
+gui.fMove.txtrev.controlgroup(0)
+gui.fMove.cmdBrowse.create(button)
+gui.fMove.cmdBrowse.caption("^")
+gui.fMove.cmdBrowse.visible(False)
+gui.fMove.cmdBrowse.size(300,300)
+gui.fMove.cmdBrowse.zorder(0)
+gui.fMove.cmdBrowse.position(8760,205)
+gui.fMove.cmdBrowse.enabled(True)
+gui.fMove.cmdBrowse.fontname("Arial")
+gui.fMove.cmdBrowse.fontsize(7)
+gui.fMove.cmdBrowse.event(click,cmdbrowse_click)
+gui.fMove.cmdBrowse.defaultvalue("")
+gui.fMove.cmdBrowse.controlgroup(0)
+gui.fMove.lblDesc.create(label,"Description",True,945,255,1,4650,230,True,0,Arial,7,-2147483633,0)
+gui.fMove.lblDesc.defaultvalue("")
+gui.fMove.lblDesc.controlgroup(0)
+gui.fMove.txtDesc.create(textbox,"",True,3120,300,0,5550,200,True,0,Arial,7,-2147483643,1)
+gui.fMove.txtDesc.event(keypressenter,cmdbrowse_click)
+gui.fMove.txtDesc.defaultvalue("")
+gui.fMove.txtDesc.controlgroup(0)
+gui.fMove.txtPart.tabstop(True)
+gui.fMove.txtPart.tabindex(1)
+gui.fMove.txtrev.tabstop(True)
+gui.fMove.txtrev.tabindex(2)
+gui.fMove.txtDesc.tabstop(True)
+gui.fMove.txtDesc.tabindex(3)
+gui.fMove.cmdBrowse.tabstop(True)
+gui.fMove.cmdBrowse.tabindex(4)
+gui.fMove.txtQty.tabstop(True)
+gui.fMove.txtQty.tabindex(15)
+gui.fMove.txtExt.tabstop(True)
+gui.fMove.txtExt.tabindex(26)
+gui.fMove.cmdSave.tabstop(True)
+gui.fMove.cmdSave.tabindex(36)
+gui.fMove.cmdQuote.tabstop(True)
+gui.fMove.cmdQuote.tabindex(56)
+
+
+gui.fMatrix..create
+gui.fMatrix..caption("Pricing Matrix")
+gui.fMatrix..size(9840,7560)
+gui.fMatrix..minx(0)
+gui.fMatrix..miny(0)
+gui.fMatrix..position(0,0)
+gui.fMatrix..event(unload,fmatrix_unload)
+gui.fMatrix..alwaysontop(False)
+gui.fMatrix..fontname("Arial")
+gui.fMatrix..fontsize(7)
+gui.fMatrix..forecolor(0)
+gui.fMatrix..fontstyle(,,,,)
+gui.fMatrix..BackColor(-2147483633)
+gui.fMatrix..controlbox(True)
+gui.fMatrix..maxbutton(False)
+gui.fMatrix..minbutton(False)
+gui.fMatrix..mousepointer(0)
+gui.fMatrix..moveable(True)
+gui.fMatrix..sizeable(False)
+gui.fMatrix..ShowInTaskBar(False)
+gui.fMatrix..titlebar(True)
+gui.fMatrix.gsfgMatrix.create(gsflexgrid)
+gui.fMatrix.gsfgMatrix.FixedRows(0)
+gui.fMatrix.gsfgMatrix.FixedCols(0)
+gui.fMatrix.gsfgMatrix.visible(True)
+gui.fMatrix.gsfgMatrix.size(9385,6145)
+gui.fMatrix.gsfgMatrix.zorder(0)
+gui.fMatrix.gsfgMatrix.position(70,130)
+gui.fMatrix.gsfgMatrix.enabled(True)
+gui.fMatrix.gsfgMatrix.event(mousedown,gsfgmatrix_mousedown)
+gui.fMatrix.cmdDone.create(button)
+gui.fMatrix.cmdDone.caption("Done")
+gui.fMatrix.cmdDone.visible(True)
+gui.fMatrix.cmdDone.size(855,375)
+gui.fMatrix.cmdDone.zorder(0)
+gui.fMatrix.cmdDone.position(200,6500)
+gui.fMatrix.cmdDone.enabled(True)
+gui.fMatrix.cmdDone.fontname("Arial")
+gui.fMatrix.cmdDone.fontsize(7)
+gui.fMatrix.cmdDone.event(click,cmddone_click)
+gui.fMatrix.cmdDone.defaultvalue("")
+gui.fMatrix.cmdDone.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.uRouter.Define("sRouter",String,Router)
+Variable.UDT.uRouter.Define("sDesc",String,Description_Router)
+Variable.UDT.uRouter.Define("sRev",String,Rev)
+Variable.UDT.uRouter.Define("fPrice",Float)
+Variable.uGlobal.uRouter.Declare("uRouter")
+Variable.UDT.uPrice.Define("fQty",Float)
+Variable.UDT.uPrice.Define("fPrice1",Float)
+Variable.UDT.uPrice.Define("fPrice2",Float)
+Variable.UDT.uPrice.Define("fPrice3",Float)
+Variable.UDT.uPrice.Define("fPrice4",Float)
+Variable.UDT.uPrice.Define("fPrice5",Float)
+Variable.UDT.uPrice.Define("fGP1",Float,GP1)
+Variable.UDT.uPrice.Define("fGP2",Float,GP2)
+Variable.UDT.uPrice.Define("fGP3",Float,GP3)
+Variable.UDT.uPrice.Define("fGP4",Float,GP4)
+Variable.UDT.uPrice.Define("iYes",Long)
+Variable.UDT.uPrice.Define("sPart",String)
+Variable.UDT.uPrice.Define("sRev",String)
+Variable.UDT.uPrice.Define("sDesc",String)
+Variable.UDT.uPrice.Define("fExt",Float)
+Variable.uGlobal.uPrice.Declare("uPrice")
+Variable.uGlobal.uQuote.Declare("uPrice")
+Variable.Global.iRow.Declare(Long,0)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'Created for Caragh Precision by SKC on 3/31/2016
+'Uses Script 1 Hook:  10670 and Populate Hook: 10260
+'This program will all the user to browser Routers and from a custom price matrix screen select the Quantity and Price to add to a Quote upload.
+'After the selections are made the user will be able to futher modify the price and quantity prior to the upload.
+'This runs from Estimating/Routing ->File -> Quick Quote-> Lines screen.
+
+
+V.Local.sCust.Declare(String)
+V.Local.sSql.Declare(String)
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+
+	F.Intrinsic.Control.Case(10260)
+		V.Passed.000201.Set("Quote")
+
+	F.Intrinsic.Control.Case(10670)
+		V.Local.sCust.Set(V.Passed.000112)
+		'For Testing
+		'V.Local.sCust.Set("BMF")
+		V.uGlobal.uQuote.Redim(-1,-1)
+
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+		F.Intrinsic.Control.CallSub(Buildstylemove)
+		'Populate Grid with Routers specific to the customer
+		F.Intrinsic.String.Build("Select Left (Router, 17) as Router, Right (Router, 3) as Rev, Description_Router From Router_Header where Customer = '{0}'",V.Local.sCust,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstRouter",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstRouter.EOF,=,False)
+			'save to udt	
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstRouter","v.uGlobal.uRouter",False)
+			Gui.fMove.gsfgMove.LoadFromUDT("V.uGlobal.uRouter","sRouter::1*!*sRev::2*!*sDesc::3",2)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstRouter.Close
+
+		F.Intrinsic.Control.CallSub(Buildstylequote)
+		F.Intrinsic.Control.CallSub(Buildstylematrix)
+
+		Gui.fMove..Show
+
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.Form1_Unload.Start
+F.Intrinsic.Control.SetErrorHandler("Form1_Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Form1_Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Form1_Unload.End
+
+Program.Sub.cmdQuote_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdQuote_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iCount.Declare(Long)
+V.Local.iUDT.Declare(Long)
+V.Local.sLineNum.Declare(String)
+V.Local.sQuoteNum.Declare(String)
+V.Local.sCust.Declare(String)
+V.Local.sCurr.Declare(String)
+V.Local.sData.Declare(String)
+V.Local.sDataFile.Declare(String)
+V.Local.sQty.Declare(String)
+V.Local.sPrice.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sExt.Declare(String)
+
+V.Local.sFilePath.Declare(String)
+
+V.Local.sCurr.Set(V.Passed.000136)
+V.Local.sQuoteNum.Set(V.Passed.000060)
+V.Local.sLineNum.Set(V.Passed.000051)
+V.Local.sCust.set(V.Passed.000112)
+
+F.Intrinsic.String.LPad(V.Local.sQuoteNum,"0",7,V.Local.sQuoteNum)
+
+
+'Create Quote Upload
+F.Intrinsic.Control.For(V.Local.iCount,V.uGlobal.uQuote.LBound,V.uGlobal.uQuote.UBound,1)
+	F.Intrinsic.Math.Add(V.Local.sLineNum,1,V.Local.sLineNum)
+	F.Intrinsic.String.LPad(V.Local.sLineNum,"0",3,V.Local.sLineNum)
+
+	F.Intrinsic.String.Split(V.uGlobal.uQuote(v.Local.iCount)!fQty,".",V.Local.sQty)
+	V.Local.sQty.RedimPreserve(0,1)
+	F.Intrinsic.String.RPad(V.Local.sQty(1),"0",4,V.Local.sQty(1))
+	F.Intrinsic.String.Build("{0}.{1}",V.Local.sQty(0),V.Local.sQty(1),V.Local.sQty(0))
+	F.Intrinsic.String.LPad(V.Local.sQty(0),"0",19,V.Local.sQty(0))
+	'quote info
+	F.Intrinsic.String.Build("{0}{1}L{2}",V.Local.sQuoteNum,V.Local.sLineNum,V.Local.sCust,V.Local.sData)
+	F.Intrinsic.String.RPad(V.Local.sData," ",24,V.Local.sData)
+	'Qty
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sData,V.Local.sQty(0),V.Local.sData)
+	F.Intrinsic.String.RPad(V.Local.sData," ",61,V.Local.sData)
+	'Part
+	F.Intrinsic.String.GSSPartString(V.uGlobal.uQuote(v.Local.iCount)!sPart,V.uGlobal.uQuote(v.Local.iCount)!sRev,V.Local.sPart)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sData,V.Local.sPart,V.Local.sData)
+	F.Intrinsic.String.RPad(V.Local.sData," ",82,V.Local.sData)
+	'Price
+	F.Intrinsic.String.Split(V.uGlobal.uQuote(v.Local.iCount)!fPrice1,".",V.Local.sPrice)
+	V.Local.sPrice.RedimPreserve(0,1)
+	F.Intrinsic.String.RPad(V.Local.sPrice(1),"0",4,V.Local.sPrice(1))
+	F.Intrinsic.String.Build("{0}.{1}",V.Local.sPrice(0),V.Local.sPrice(1),V.Local.sPrice(0))
+	F.Intrinsic.String.LPad(V.Local.sPrice(0),"0",19,V.Local.sPrice(0))
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sData,V.Local.sPrice(0),V.Local.sData)
+	'Desc
+	F.Intrinsic.String.RPad(V.Local.sData," ",132,V.Local.sData)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sData,V.uGlobal.uQuote(v.Local.iCount)!sDesc,V.Local.sData)
+	'Order Curr and Ext
+	F.Intrinsic.String.RPad(V.Local.sData," ",548,V.Local.sData)
+	F.Intrinsic.String.Split(V.uGlobal.uQuote(v.Local.iCount)!fExt,".",V.Local.sExt)
+	V.Local.sExt.RedimPreserve(0,1)
+	F.Intrinsic.String.RPad(V.Local.sExt(1),"0",4,V.Local.sExt(1))
+	F.Intrinsic.String.Build("{0}.{1}",V.Local.sExt(0),V.Local.sExt(1),V.Local.sExt(0))
+	F.Intrinsic.String.LPad(V.Local.sExt(0),"0",19,V.Local.sExt(0))
+	F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sData,V.local.sCurr,V.Local.sExt(0),V.Local.sData)
+	'fill in the line
+	F.Intrinsic.String.RPad(V.Local.sData," ",857,V.Local.sData)
+	
+	'get it ready for another line
+	F.Intrinsic.Control.If(V.Local.sDataFile.Trim,!=,"")
+		F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sDataFile,V.Ambient.NewLine,V.Local.sData,V.Local.sDataFile)
+	F.Intrinsic.Control.Else
+		V.Local.sDataFile.Set(V.Local.sData)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.iCount)
+
+F.Intrinsic.String.Build("{0}\Quote.txt",V.Caller.FilesDir,V.Local.sFilePath)
+F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sDataFile)
+F.Global.General.CallWrapperSync(50,"UPLQUOTE/A")
+F.Intrinsic.Control.CallSub(Form1_unload)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdQuote_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdQuote_Click.End
+
+Program.Sub.BuildStyleMove.Start
+F.Intrinsic.Control.SetErrorHandler("BuildStyleMove_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+Gui.fMove.gsfgMove.Cols(5)
+Gui.fMove.gsfgMove.Rows(2)
+Gui.fMove.gsfgMove.FixedRows(1)
+
+Gui.fMove.gsfgMove.SetColumnPercentages(".05:.30:.05:.50:.10")
+
+'Column 0
+'Style 1
+Gui.fMove.gsfgMove.BuildStyle(1,0,"Format","Alignment",4)
+Gui.fMove.gsfgMove.BuildStyle(1,0,"Type","Locked",True)
+
+'Style 2
+Gui.fMove.gsfgMove.BuildStyle(2,0,"Format","Alignment",2)
+Gui.fMove.gsfgMove.BuildStyle(2,0,"Type","Checkbox","")
+
+'Column 1
+'Style 1
+Gui.fMove.gsfgMove.BuildStyle(1,1,"Format","Alignment",4)
+Gui.fMove.gsfgMove.BuildStyle(1,1,"Type","Locked",True)
+
+
+'Style 2
+Gui.fMove.gsfgMove.BuildStyle(2,1,"Type","Locked",True)
+Gui.fMove.gsfgMove.BuildStyle(2,1,"Format","Alignment",2)
+
+
+
+'Column 2
+'Style 1
+Gui.fMove.gsfgMove.BuildStyle(1,2,"Type","Locked",True)
+Gui.fMove.gsfgMove.BuildStyle(1,2,"Format","Alignment",4)
+
+'Style 2
+Gui.fMove.gsfgMove.BuildStyle(2,2,"Type","Locked",True)
+Gui.fMove.gsfgMove.BuildStyle(2,2,"Format","Alignment",2)
+
+
+'Column 3
+'Style 1
+Gui.fMove.gsfgMove.BuildStyle(1,3,"Type","Locked",True)
+Gui.fMove.gsfgMove.BuildStyle(1,3,"Format","Alignment",4)
+
+
+'Style 2
+Gui.fMove.gsfgMove.BuildStyle(2,3,"Type","Locked",True)
+Gui.fMove.gsfgMove.BuildStyle(2,3,"Format","Alignment",2)
+
+'Column 4
+'Style 1
+Gui.fMove.gsfgMove.BuildStyle(1,4,"Type","Locked",True)
+Gui.fMove.gsfgMove.BuildStyle(1,4,"Format","Alignment",4)
+
+
+'Style 2
+Gui.fMove.gsfgMove.BuildStyle(2,4,"Type","Command","Matrix")
+Gui.fMove.gsfgMove.BuildStyle(2,4,"Format","Alignment",4)
+
+
+Gui.fMove.gsfgMove.TextMatrix(1,0,"Part Number")
+Gui.fMove.gsfgMove.TextMatrix(2,0,"Rev")
+Gui.fMove.gsfgMove.TextMatrix(3,0,"Description")
+
+Gui.fMove.gsfgMove.ApplyStyle(0,1)
+Gui.fMove.gsfgMove.ApplyStyle(1,2)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStyleMove_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStyleMove.End
+
+Program.Sub.BuildStyleMatrix.Start
+F.Intrinsic.Control.SetErrorHandler("BuildStyleMatrix_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Move Table Flexgrid
+Gui.fMatrix.gsfgMatrix.Cols(15)
+
+Gui.fMatrix.gsfgMatrix.Rows(2)
+Gui.fMatrix.gsfgMatrix.FixedRows(1)
+
+Gui.fMatrix.gsfgMatrix.SetColumnPercentages(".10:.10:.10:.10:.10:.10:.10:.10:.10:.10:.0:.0:.0:.0:.0")
+
+'Column 0
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,0,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,0,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,0,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,0,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,0,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,0,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,0,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,0,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,0,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,0,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,0,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,0,"Color","Back",V.Color.Sec-GSS-12)
+
+'Column 1
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,1,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,1,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,1,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(1,1,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,1,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,1,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,1,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(2,1,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,1,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,1,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,1,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,1,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 2
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,2,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,2,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,2,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,2,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,2,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,2,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,2,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,2,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,2,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,2,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,2,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,2,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 3
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,3,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,3,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,3,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(1,3,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,3,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,3,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,3,"Format","Mask","0.00")
+''Gui.fMatrix.gsfgMatrix.BuildStyle(2,3,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,3,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,3,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,3,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,3,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 4
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,4,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,4,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,4,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,4,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,4,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,4,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,4,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,4,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,4,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,4,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,4,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,4,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 5
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,5,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,5,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,5,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(1,5,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,5,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,5,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,5,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(2,5,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,5,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,5,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,5,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,5,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 6
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,6,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,6,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,6,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,6,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,6,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,6,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,6,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,6,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,6,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,6,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,6,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,6,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 7
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,7,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,7,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,7,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(1,7,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,7,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,7,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,7,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(2,7,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,7,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,7,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,7,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,7,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 8
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,8,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,8,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,8,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,8,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,8,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,8,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,8,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,8,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,8,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,8,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,8,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,8,"Color","Back",V.Color.Sec-GSS-12)
+
+
+'Column 9
+'Style 1
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,9,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,9,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(1,9,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(1,9,"Color","Back",V.Color.White)
+
+'Style 2
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,9,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,9,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(2,9,"Format","Mask","0.00")
+'Gui.fMatrix.gsfgMatrix.BuildStyle(2,9,"Color","Back",V.Color.Sec-GSS-01)
+
+'Style 3
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,9,"Format","Alignment",4)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,9,"Type","Locked",True)
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,9,"Format","Mask","0.00")
+Gui.fMatrix.gsfgMatrix.BuildStyle(3,9,"Color","Back",V.Color.Sec-GSS-12)
+
+
+
+Gui.fMatrix.gsfgMatrix.TextMatrix(0,0,"Qty")
+Gui.fMatrix.gsfgMatrix.TextMatrix(1,0,"Cost")
+Gui.fMatrix.gsfgMatrix.TextMatrix(2,0,"Price 1")
+Gui.fMatrix.gsfgMatrix.TextMatrix(3,0,"GP% 1")
+Gui.fMatrix.gsfgMatrix.TextMatrix(4,0,"Price 2")
+Gui.fMatrix.gsfgMatrix.TextMatrix(5,0,"GP% 2")
+Gui.fMatrix.gsfgMatrix.TextMatrix(6,0,"Price 3")
+Gui.fMatrix.gsfgMatrix.TextMatrix(7,0,"GP% 3")
+Gui.fMatrix.gsfgMatrix.TextMatrix(8,0,"Price 4")
+Gui.fMatrix.gsfgMatrix.TextMatrix(9,0,"GP% 4")
+
+Gui.fMatrix.gsfgMatrix.ApplyStyle(0,3)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStyleMatrix_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStyleMatrix.End
+
+Program.Sub.BuildStyleQuote.Start
+F.Intrinsic.Control.SetErrorHandler("BuildStyleQuote_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+Gui.fMove.gsfgQuote.Cols(7)
+Gui.fMove.gsfgQuote.Rows(2)
+Gui.fMove.gsfgQuote.FixedRows(1)
+
+Gui.fMove.gsfgQuote.SetColumnPercentages(".05:.20:.05:.35:.10:.10:.15")
+
+'Column 0
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,0,"Format","Alignment",4)
+Gui.fMove.gsfgQuote.BuildStyle(1,0,"Type","Locked",True)
+
+'Style 2
+Gui.fMove.gsfgQuote.BuildStyle(2,0,"Format","Alignment",2)
+Gui.fMove.gsfgQuote.BuildStyle(2,0,"Type","Checkbox","")
+
+
+'Column 1
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,1,"Format","Alignment",4)
+Gui.fMove.gsfgQuote.BuildStyle(1,1,"Type","Locked",True)
+
+
+'Style 2
+Gui.fMove.gsfgQuote.BuildStyle(2,1,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(2,1,"Format","Alignment",2)
+
+
+
+'Column 2
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,2,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(1,2,"Format","Alignment",4)
+
+'Style 2
+Gui.fMove.gsfgQuote.BuildStyle(2,2,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(2,2,"Format","Alignment",2)
+
+
+'Column 3
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,3,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(1,3,"Format","Alignment",4)
+
+
+'Style 2
+Gui.fMove.gsfgQuote.BuildStyle(2,3,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(2,3,"Format","Alignment",2)
+
+
+'Column 4
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,4,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(1,4,"Format","Alignment",4)
+
+
+'Style 2
+'Gui.fMove.gsfgQuote.BuildStyle(2,4,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(2,4,"Format","Alignment",6)
+Gui.fMove.gsfgQuote.BuildStyle(2,4,"Format","Mask","0.00")
+
+'Column 5
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,5,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(1,5,"Format","Alignment",4)
+
+'Style 2
+'Gui.fMove.gsfgQuote.BuildStyle(2,5,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(2,5,"Format","Alignment",6)
+Gui.fMove.gsfgQuote.BuildStyle(2,5,"Format","Mask","0.00")
+
+'Column 6
+'Style 1
+Gui.fMove.gsfgQuote.BuildStyle(1,6,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(1,6,"Format","Alignment",4)
+
+
+'Style 2
+Gui.fMove.gsfgQuote.BuildStyle(2,6,"Type","Locked",True)
+Gui.fMove.gsfgQuote.BuildStyle(2,6,"Format","Alignment",6)
+Gui.fMove.gsfgQuote.BuildStyle(2,6,"Format","Mask","0.00")
+
+
+
+Gui.fMove.gsfgQuote.TextMatrix(1,0,"Part Number")
+Gui.fMove.gsfgQuote.TextMatrix(2,0,"Rev")
+Gui.fMove.gsfgQuote.TextMatrix(3,0,"Description")
+Gui.fMove.gsfgQuote.TextMatrix(4,0,"Qty")
+Gui.fMove.gsfgQuote.TextMatrix(5,0,"List Price")
+Gui.fMove.gsfgQuote.TextMatrix(6,0,"Extended Price")
+
+Gui.fMove.gsfgQuote.ApplyStyle(0,1)
+Gui.fMove.gsfgQuote.ApplyStyle(1,2)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStyleQuote_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStyleQuote.End
+
+program.sub.gsfgmove_commandclick.start
+F.Intrinsic.Control.SetErrorHandler("gsfgmove_commandclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sDesc.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sPrice.Declare(String)
+V.Local.sQty.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sRow.Declare(String)
+V.Local.iCount.Declare(Long)
+
+Gui.fMove.gsfgMove.ReadRow(V.Args.Key,V.Local.sRow)
+F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+F.Intrinsic.String.GSSPartString(V.Local.sRow(1),V.Local.sRow(2),V.Local.sPart)
+V.uGlobal.uPrice.Redim(-1,-1)
+
+V.Global.iRow.Set(V.Args.Key)
+
+'Get the info
+F.Intrinsic.Control.For(V.Local.iCount,1,4,1)
+
+	F.Intrinsic.String.Build("Select Quantity_{0} from  v_RTR_Price_1_4 Where Router = '{1}'",V.Local.iCount,V.Local.sPart,V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql,V.Local.sRet)
+'	F.Intrinsic.Debug.InvokeDebugger
+
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,!=,"0")
+		F.Intrinsic.String.Build("Select Price_{0}_1, Price_{0}_2, Price_{0}_3, Price_{0}_4, Price_{0}_5, Quantity_{0}, (((Price_{0}_2 - Price_{0}_1)/ Price_{0}_2)* 100) as GP1,  (((Price_{0}_3 - Price_{0}_1)/ Price_{0}_3)* 100) as GP2, (((Price_{0}_4 - Price_{0}_1)/ Price_{0}_4)* 100) as GP3, (((Price_{0}_5 - Price_{0}_1)/ Price_{0}_5)* 100) as GP4  from v_RTR_Price_1_4 Where Router = '{1}'",V.Local.iCount,V.Local.sPart,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstPrice",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPrice.EOF,=,False)
+			'Load udt
+			F.Intrinsic.String.Build("Price_{0}_1",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice1,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_2",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice2,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_3",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice3,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_4",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice4,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_5",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice5,V.Local.sPrice)
+			F.Intrinsic.String.Build("Quantity_{0}",V.Local.iCount,V.Local.sQty)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fQty,V.Local.sQty)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstPrice","V.uGlobal.uPrice",True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstPrice.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCount)
+
+
+
+
+F.Intrinsic.Control.For(V.Local.iCount,5,8,1)
+
+	F.Intrinsic.String.Build("Select Quantity_{0} from  v_RTR_Price_5_8 Where Router = '{1}'",V.Local.iCount,V.Local.sPart,V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql,V.Local.sRet)
+
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,!=,"0")
+
+		F.Intrinsic.String.Build("Select Price_{0}_1, Price_{0}_2, Price_{0}_3, Price_{0}_4, Price_{0}_5, Quantity_{0},  (((Price_{0}_2 - Price_{0}_1)/ Price_{0}_2)* 100) as GP1,  (((Price_{0}_3 - Price_{0}_1)/ Price_{0}_3)* 100) as GP2, (((Price_{0}_4 - Price_{0}_1)/ Price_{0}_4)* 100) as GP3, (((Price_{0}_5 - Price_{0}_1)/ Price_{0}_5)* 100) as GP4   from v_RTR_Price_5_8 Where Router = '{1}'",V.Local.iCount,V.Local.sPart,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstPrice",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPrice.EOF,=,False)
+			'Load udt
+			F.Intrinsic.String.Build("Price_{0}_1",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice1,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_2",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice2,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_3",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice3,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_4",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice4,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_5",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice5,V.Local.sPrice)
+			F.Intrinsic.String.Build("Quantity_{0}",V.Local.iCount,V.Local.sQty)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fQty,V.Local.sQty)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstPrice","V.uGlobal.uPrice",True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstPrice.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCount)
+
+
+
+F.Intrinsic.Control.For(V.Local.iCount,9,10,1)
+
+
+	F.Intrinsic.String.Build("Select Quantity_{0} from  v_RTR_Price_9_10 Where Router = '{1}'",V.Local.iCount,V.Local.sPart,V.Local.sSql)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql,V.Local.sRet)
+
+	F.Intrinsic.Control.If(V.Local.sRet.Trim,!=,"0")
+
+		F.Intrinsic.String.Build("Select Price_{0}_1, Price_{0}_2, Price_{0}_3, Price_{0}_4, Price_{0}_5, Quantity_{0},  (((Price_{0}_2 - Price_{0}_1)/ Price_{0}_2)* 100) as GP1,  (((Price_{0}_3 - Price_{0}_1)/ Price_{0}_3)* 100) as GP2, (((Price_{0}_4 - Price_{0}_1)/ Price_{0}_4)* 100) as GP3, (((Price_{0}_5 - Price_{0}_1)/ Price_{0}_5)* 100) as GP4   from v_RTR_Price_9_10 Where Router = '{1}'",V.Local.iCount,V.Local.sPart,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstPrice",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPrice.EOF,=,False)
+			'Load udt
+			F.Intrinsic.String.Build("Price_{0}_1",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice1,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_2",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice2,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_3",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice3,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_4",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice4,V.Local.sPrice)
+			F.Intrinsic.String.Build("Price_{0}_5",V.Local.iCount,V.Local.sPrice)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fPrice5,V.Local.sPrice)
+			F.Intrinsic.String.Build("Quantity_{0}",V.Local.iCount,V.Local.sQty)
+			F.Intrinsic.Variable.SetUDTFieldReference(V.uGlobal.uPrice!fQty,V.Local.sQty)
+			F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstPrice","V.uGlobal.uPrice",True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstPrice.Close
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.iCount)
+
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uPrice!sPart,V.Local.sRow(1))
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uPrice!sRev,V.Local.sRow(2))
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uPrice!sDesc,V.Local.sRow(3))
+
+'showpricematrixscreen
+Gui.fMatrix.gsfgMatrix.LoadFromUDT("V.uGlobal.uPrice","fQty::0*!*fPrice1::1*!*fPrice2::2*!*fGP1::3*!*fPrice3::4*!*fGP2::5*!*fPrice4::6*!*fGP3::7*!*fPrice5::8*!*fGP4::9",1)
+
+
+
+
+
+
+Gui.fMatrix..Show
+Gui.fMove..Visible(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgmove_commandclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgmove_commandclick.end
+
+program.sub.cmdbrowse_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrowse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sCust.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sDesc.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sSql.Declare(String)
+
+
+V.Local.sCust.Set(V.Passed.000112)
+'For Testing
+'V.Local.sCust.Set("BMF")
+V.Local.sPart.Set(V.Screen.fMove!txtPart.Text)
+V.Local.sRev.Set(V.Screen.fMove!txtrev.Text)
+V.Local.sDesc.Set(V.Screen.fMove!txtDesc.Text)
+
+'Check to see if a part, rev, or Description was entered in the Textboxes.
+F.Intrinsic.Control.If(V.Local.sPart.Trim,!=,"")
+	F.Intrinsic.String.Build("%{0}%",V.Local.sPart.Trim,V.Local.sPart)
+F.Intrinsic.Control.Else
+	V.Local.sPart.Set("%")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sRev.Trim,!=,"")
+	F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Local.sPart)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sDesc.Trim,!=,"")
+	F.Intrinsic.String.Build(" and UCase (Description_Router) Like '%{0}%'",V.Local.sDesc.UCase,V.Local.sDesc)
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.String.Split("Router*!*Rev*!*Description","*!*",V.Local.sTitle)
+'F.Intrinsic.String.Split("2000*!*800*!*3000","*!*",V.Local.iWidths)
+
+
+F.Intrinsic.String.Build("Select Left (Router, 17) as Router, Right (Router, 3) as Rev, Description_Router From Router_Header where Customer = '{0}' and Router Like '{1}' {2}",V.Local.sCust,V.Local.sPart,V.Local.sDesc,V.Local.sSql)
+'F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+'F.Intrinsic.UI.Browser("Select a Router","conx",V.Local.sSql,V.Local.sTitle,V.Local.iWidths,V.Local.sRet)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstRouter",V.Local.sSql)
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstRouter","v.uGlobal.uRouter",False)
+Gui.fMove.gsfgMove.LoadFromUDT("V.uGlobal.uRouter","sRouter::1*!*sRev::2*!*sDesc::3",2)
+
+'Search for Router
+'
+'F.Intrinsic.Control.If(V.Local.sRet,!=,"***CANCEL***")
+'	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'	Gui.fMove.txtPart.Text(V.Local.sRet(0).Trim)
+'	Gui.fMove.txtrev.Text(V.Local.sRet(1).Trim)
+'	Gui.fMove.txtDesc.Text(V.Local.sRet(2).Trim)
+'	'Populate the grid
+'	F.Intrinsic.String.GSSPartString(V.Local.sRet(0).Trim,V.Local.sRet(1).Trim,V.Local.sPart)
+'	F.Intrinsic.String.Build("Select Left (Router, 17) as Router, Right (Router, 3) as Rev, Description_Router From Router_Header where Customer = '{0}' and Router = '{1}' ",V.Local.sCust,V.Local.sPart,V.Local.sSql)
+'	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstRouter",V.Local.sSql)
+'	F.Intrinsic.Control.If(V.ODBC.conx!rstRouter.EOF,=,False)
+'		'save to udt	
+'		F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstRouter","v.uGlobal.uRouter",False)
+'		Gui.fMove.gsfgMove.LoadFromUDT("V.uGlobal.uRouter","sRouter::1*!*sRev::2*!*sDesc::3*!*fPrice::5",2)
+'	F.Intrinsic.Control.EndIf
+'	F.ODBC.conx!rstRouter.Close
+'F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdbrowse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrowse_click.end
+
+program.sub.fmatrix_unload.start
+F.Intrinsic.Control.SetErrorHandler("fmatrix_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.fMatrix..Visible(False)
+Gui.fMove..Visible(True)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("fmatrix_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.fmatrix_unload.end
+
+program.sub.gsfgmatrix_mousedown.start
+F.Intrinsic.Control.SetErrorHandler("gsfgmatrix_mousedown_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRow.Declare(String)
+V.Local.sCol.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.iUDT.Declare(Long)
+V.Local.iQty.Declare(Float)
+V.Local.iExt.Declare(Float)
+
+Gui.fMatrix.gsfgMatrix.GetTextMatrix(10,V.Args.MouseRow,V.Local.sRow)
+
+Gui.fMatrix.gsfgMatrix.ReadRow(V.Args.MouseRow,V.Local.sRow)
+F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+
+V.Local.iQty.Set(V.Screen.fMove!txtQty.Text)
+V.Local.iExt.Set(V.Screen.fMove!txtExt.Text)
+
+F.Intrinsic.Control.SelectCase(V.Args.mouseCol)
+	F.Intrinsic.Control.Case(2)
+
+		Gui.fMatrix.gsfgMatrix.GetTextMatrix(11,V.Args.MouseRow,V.Local.sCol)
+
+		F.Intrinsic.Control.If(V.Local.sCol,=,1)
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(2,V.Args.MouseRow,"BackColor",V.Color.White)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(11,V.Args.mouseRow,"0")
+			'Remove from quote grid seek flag delete
+			F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uQuote!fQty,V.Local.sRow(0),V.uGlobal.uQuote!fPrice1,V.Local.sRow(2),V.Local.sRet)
+			F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uQuote,True,V.Local.sRet)
+
+			F.Intrinsic.Math.Sub(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Sub(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+			
+		F.Intrinsic.Control.Else
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(2,V.Args.MouseRow,"BackColor",V.Color.SEC-GSS-01)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(11,V.Args.mouseRow,"1")
+
+
+			'Add to Quote grid
+			F.Intrinsic.Control.If(V.uGlobal.uQuote.UBound,=,-1)
+				V.uGlobal.uQuote.Redim(0,0)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.uGlobal.uQuote.UBound,1,V.Local.iUDT)
+				V.uGlobal.uQuote.RedimPreserve(0,V.Local.iUDT)
+			F.Intrinsic.Control.EndIf
+			V.uGlobal.uQuote(v.Local.iUDT)!fQty.Set(V.Local.sRow(0))
+			V.uGlobal.uQuote(v.Local.iUDT)!fPrice1.Set(V.Local.sRow(2))
+			F.Intrinsic.Math.Mult(V.Local.sRow(0),V.Local.sRow(2),V.uGlobal.uQuote(v.Local.iUDT)!fExt)
+			'get the part, rev, and desc from the move grid ****************************************************************************************
+			'add to textbox totals
+			F.Intrinsic.Math.Add(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Add(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+		
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Case(4)
+		Gui.fMatrix.gsfgMatrix.GetTextMatrix(12,V.Args.MouseRow,V.Local.sCol)
+		F.Intrinsic.Control.If(V.Local.sCol,=,1)
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(4,V.Args.MouseRow,"BackColor",V.Color.White)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(12,V.Args.mouseRow,"0")
+			'Remove from quote grid seek flag delete
+			F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uQuote!fQty,V.Local.sRow(0),V.uGlobal.uQuote!fPrice1,V.Local.sRow(4),V.Local.sRet)
+			F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uQuote,True,V.Local.sRet)
+
+			F.Intrinsic.Math.Sub(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Sub(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+
+		F.Intrinsic.Control.Else
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(4,V.Args.MouseRow,"BackColor",V.Color.SEC-GSS-01)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(12,V.Args.mouseRow,"1")
+
+			'Add to Quote grid
+			F.Intrinsic.Control.If(V.uGlobal.uQuote.UBound,=,-1)
+				V.uGlobal.uQuote.Redim(0,0)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.uGlobal.uQuote.UBound,1,V.Local.iUDT)
+				V.uGlobal.uQuote.RedimPreserve(0,V.Local.iUDT)
+			F.Intrinsic.Control.EndIf
+			V.uGlobal.uQuote(v.Local.iUDT)!fQty.Set(V.Local.sRow(0))
+			V.uGlobal.uQuote(v.Local.iUDT)!fPrice1.Set(V.Local.sRow(4))
+			F.Intrinsic.Math.Mult(V.Local.sRow(0),V.Local.sRow(4),V.uGlobal.uQuote(v.Local.iUDT)!fExt)
+			'get the part, rev, and desc from the move grid ****************************************************************************************
+			F.Intrinsic.Math.Add(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Add(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.Case(6)
+		Gui.fMatrix.gsfgMatrix.GetTextMatrix(13,V.Args.MouseRow,V.Local.sCol)
+		F.Intrinsic.Control.If(V.Local.sCol,=,1)
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(6,V.Args.MouseRow,"BackColor",V.Color.White)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(13,V.Args.mouseRow,"0")
+			'Remove from quote grid seek flag delete
+			F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uQuote!fQty,V.Local.sRow(0),V.uGlobal.uQuote!fPrice1,V.Local.sRow(6),V.Local.sRet)
+			F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uQuote,True,V.Local.sRet)
+
+			F.Intrinsic.Math.Sub(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Sub(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+
+		F.Intrinsic.Control.Else
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(6,V.Args.MouseRow,"BackColor",V.Color.SEC-GSS-01)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(13,V.Args.mouseRow,"1")
+
+			'Add to Quote grid
+			F.Intrinsic.Control.If(V.uGlobal.uQuote.UBound,=,-1)
+				V.uGlobal.uQuote.Redim(0,0)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.uGlobal.uQuote.UBound,1,V.Local.iUDT)
+				V.uGlobal.uQuote.RedimPreserve(0,V.Local.iUDT)
+			F.Intrinsic.Control.EndIf
+			V.uGlobal.uQuote(v.Local.iUDT)!fQty.Set(V.Local.sRow(0))
+			V.uGlobal.uQuote(v.Local.iUDT)!fPrice1.Set(V.Local.sRow(6))
+			F.Intrinsic.Math.Mult(V.Local.sRow(0),V.Local.sRow(6),V.uGlobal.uQuote(v.Local.iUDT)!fExt)
+			'get the part, rev, and desc from the move grid ****************************************************************************************
+			F.Intrinsic.Math.Add(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Add(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.case(8)
+		Gui.fMatrix.gsfgMatrix.GetTextMatrix(14,V.Args.MouseRow,V.Local.sCol)
+		F.Intrinsic.Control.If(V.Local.sCol,=,1)
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(8,V.Args.MouseRow,"BackColor",V.Color.White)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(14,V.Args.mouseRow,"0")
+			'Remove from quote grid seek flag delete
+			F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uQuote!fQty,V.Local.sRow(0),V.uGlobal.uQuote!fPrice1,V.Local.sRow(8),V.Local.sRet)
+			F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uQuote,True,V.Local.sRet)
+
+			F.Intrinsic.Math.Sub(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Sub(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+
+		F.Intrinsic.Control.Else
+			Gui.fMatrix.gsfgMatrix.GSGOverrideProperty(8,V.Args.MouseRow,"BackColor",V.Color.SEC-GSS-01)
+			Gui.fMatrix.gsfgMatrix.TextMatrix(14,V.Args.mouseRow,"1")
+
+			'Add to Quote grid
+			F.Intrinsic.Control.If(V.uGlobal.uQuote.UBound,=,-1)
+				V.uGlobal.uQuote.Redim(0,0)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Add(V.uGlobal.uQuote.UBound,1,V.Local.iUDT)
+				V.uGlobal.uQuote.RedimPreserve(0,V.Local.iUDT)
+			F.Intrinsic.Control.EndIf
+			V.uGlobal.uQuote(v.Local.iUDT)!fQty.Set(V.Local.sRow(0))
+			V.uGlobal.uQuote(v.Local.iUDT)!fPrice1.Set(V.Local.sRow(8))
+			F.Intrinsic.Math.Mult(V.Local.sRow(0),V.Local.sRow(8),V.uGlobal.uQuote(v.Local.iUDT)!fExt)
+			'get the part, rev, and desc from the move grid ****************************************************************************************
+			F.Intrinsic.Math.Add(V.Local.iQty,V.Local.sRow(0),V.Local.iQty)
+			F.Intrinsic.Math.Add(V.Local.iExt,V.uGlobal.uQuote(v.Local.iUDT)!fExt,V.Local.iExt)
+
+		F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.EndSelect
+
+
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uQuote)
+Gui.fMove.gsfgMove.ReadRow(V.Global.iRow,V.Local.sRow)
+F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uQuote!sPart,V.Local.sRow(1))
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uQuote!sRev,V.Local.sRow(2))
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uQuote!sDesc,V.Local.sRow(3))
+
+Gui.fMove.txtExt.Text(V.Local.iExt.Format0.00)
+Gui.fMove.txtQty.Text(V.Local.iQty.Format0.00)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgmatrix_mousedown_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgmatrix_mousedown.end
+
+program.sub.cmddone_click.start
+F.Intrinsic.Control.SetErrorHandler("cmddone_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRow.Declare(String)
+V.Local.iCount.Declare(Long)
+
+Gui.fMatrix..Visible(False)
+Gui.fMove..Visible(True)
+
+
+
+'add what is left to the quote grid
+Gui.fMove.gsfgQuote.LoadFromUDT("v.uGlobal.uQuote","sPart::1*!*sRev::2*!*sDesc::3*!*fQty::4*!*fPrice1::5*!*fExt::6",2)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddone_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmddone_click.end
+
+program.sub.gsfgquote_checkclick.start
+F.Intrinsic.Control.SetErrorHandler("gsfgquote_checkclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRow.Declare(Long)
+
+V.Local.iRow.Set(V.Args.Key)
+'Remove lines if Checked.
+F.Intrinsic.Math.Sub(V.Local.iRow,1,V.Local.iRow)
+F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uQuote,True,V.Local.iRow)
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uQuote)
+
+Gui.fMove.gsfgQuote.DeleteRow(V.Args.Key)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgquote_checkclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgquote_checkclick.end
+
+program.sub.gsfgquote_posttextmatrix.start
+F.Intrinsic.Control.SetErrorHandler("gsfgquote_posttextmatrix_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRow.Declare(String)
+V.Local.iRowNum.Declare(Long)
+V.Local.fExt.Declare(Float)
+V.Local.fQty.Declare(Float)
+V.Local.fPrevExt.Declare(Float)
+V.Local.fPrevQty.Declare(Float)
+
+'Update the UDT, flexgrid extension, and the total textboxes
+V.Local.iRowNum.Set(V.Args.Key)
+F.Intrinsic.Math.Sub(V.Local.iRowNum,1,V.Local.iRowNum)
+
+Gui.fMove.gsfgQuote.ReadRow(V.Args.Key,V.Local.sRow)
+F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+
+F.Intrinsic.Math.Mult(V.Local.sRow(4),V.Local.sRow(5),V.Local.fExt)
+Gui.fMove.gsfgQuote.TextMatrix(6,V.Args.Key,V.Local.fExt)
+
+V.Local.fPrevExt.Set(V.uGlobal.uQuote(v.Local.iRowNum)!fExt)
+V.Local.fPrevQty.Set(V.uGlobal.uQuote(v.Local.iRowNum)!fQty)
+
+V.uGlobal.uQuote(v.Local.iRowNum)!fExt.Set(V.Local.fExt)
+V.uGlobal.uQuote(v.Local.iRowNum)!fQty.Set(V.Local.sRow(4))
+
+'Update the Quantity and Extension Textboxes
+
+F.Intrinsic.Math.Sub(V.Screen.fMove!txtQty.Text,V.Local.fPrevQty,V.Local.fPrevQty)
+F.Intrinsic.Math.Sub(V.Screen.fMove!txtExt.Text,V.Local.fPrevExt,V.Local.fPrevExt)
+
+F.Intrinsic.Math.Add(V.Local.fPrevExt,V.Local.fExt,V.Local.fExt)
+F.Intrinsic.Math.Add(V.Local.fPrevQty,V.Local.sRow(4),V.Local.fQty)
+
+Gui.fMove.txtQty.Text(V.Local.fQty.Format0.00)
+Gui.fMove.txtExt.Text(V.Local.fExt.Format0.00)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgquote_posttextmatrix_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_CAR_3655_QuoteUp.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgquote_posttextmatrix.end
+
+Program.Sub.Comments.Start
+${$0$}$$}$SKT$}$9/10/2015 2:40:29 PM
+Program.Sub.Comments.End
+
